@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LitoralPay{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'src/accounts/css/style.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}" aria-label="Ir a la página de inicio">Inicio</a></li>
+                <li><a href="{% url 'login' %}" aria-label="Ir a la página de inicio de sesión">Iniciar sesión</a></li>
+                <li><a href="{% url 'register' %}" aria-label="Ir a la página de registro">Registrarse</a></li>
+                <li><a href="{% url 'profile' %}" aria-label="Ir al perfil de usuario">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        {% block content %}
+        <!-- Este bloque será reemplazado por el contenido de las vistas extendidas -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 LitoralPay. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{% static 'accounts/js/main.js' %}"></script>
+</body>
+</html>
+
+
